@@ -33,7 +33,7 @@ echo "insert the ip address or the hostname of the remote host"
 read host_ssh
 done
 
-until [[ "$porta" =~ ^-?[0-9]+$ ]] && [ "$remote_ports" -ge 1 ] && [ "$remote_ports" -le 65535 ]; do
+until [[ "$remote_ports" =~ ^-?[0-9]+$ ]] && [ "$remote_ports" -ge 1 ] && [ "$remote_ports" -le 65535 ]; do
 echo "insert the port of the remote host to use"
 read remote_ports
 done
