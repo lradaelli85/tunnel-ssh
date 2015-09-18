@@ -17,7 +17,7 @@ echo "insert the ports of the remote host that you want to connect to"
 read porta 
 done
 
-until [[ "$porta" =~ ^-?[0-9]+$ ]] && [ "$porta_locale" -ge 1 ] && [ "$porta_locale" -le 65535 ]; do
+until [[ "$porta_locale" =~ ^-?[0-9]+$ ]] && [ "$porta_locale" -ge 1 ] && [ "$porta_locale" -le 65535 ]; do
 echo "insert local port to use"
 echo "maybe you should choose a port between 1025 and 65535"
 read porta_locale 
