@@ -8,12 +8,12 @@ porta_locale="0"
 remote_ports="0"
 
 while [ -z "$nome" ]; do
-echo "insert the ip address or the hostname of the remote host"
+echo "insert the ip address or the hostname of the remote host [destination server]:"
 read nome
 done
 
 until [[ "$porta" =~ ^-?[0-9]+$ ]] && [ "$porta" -ge 1 ] && [ "$porta" -le 65535 ]; do
-echo "insert the ports of the remote host that you want to connect to"
+echo "insert the ports of the remote host [destination server] that you want to connect to"
 read porta 
 done
 
@@ -24,17 +24,17 @@ read porta_locale
 done
 
 while [ -z "$utente" ]; do
-echo "insert ssh user to use for the ssh host connection"
+echo "insert ssh user to use for the ssh server connection"
 read utente
 done
 
 while [ -z "$host_ssh" ]; do
-echo "insert the ip address or the hostname of the remote host"
+echo "insert the ip address or the hostname of the ssh server"
 read host_ssh
 done
 
 until [[ "$remote_ports" =~ ^-?[0-9]+$ ]] && [ "$remote_ports" -ge 1 ] && [ "$remote_ports" -le 65535 ]; do
-echo "insert the port of the remote host to use"
+echo "insert the port of the ssh server to use"
 read remote_ports
 done
 
