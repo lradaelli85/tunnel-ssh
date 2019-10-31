@@ -44,16 +44,19 @@ insert SSH PROXY USER for the SSH PROXY authentication: luca
 insert the ip address or the hostname of the SSH PROXY: 192.168.122.207
 insert the SSH PROXY PORT : 22
 luca@192.168.122.207's password: 
+```
 
 Once the password has been inserted,
 in another terminal check if there is a TCP socket on port 2222
 
+```
 luca@linux:~$ sudo ss -ntl |grep 2222
 LISTEN   0         128               127.0.0.1:2222             0.0.0.0:*        users:(("ssh",pid=10949,fd=5))
-
+```
 
 open the connection
 
+```
 luca@linux:~$ curl -v http://127.0.0.1:2222/test
 *   Trying 127.0.0.1...
 * TCP_NODELAY set
