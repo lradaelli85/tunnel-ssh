@@ -50,7 +50,7 @@ Once the password has been inserted,
 in another terminal check if there is a TCP socket on port 2222
 
 ```
-luca@linux:~$ sudo ss -ntl |grep 2222
+luca@linux:~$ sudo ss -ntpl |grep 2222
 LISTEN   0         128               127.0.0.1:2222             0.0.0.0:*        users:(("ssh",pid=10949,fd=5))
 ```
 
