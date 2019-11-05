@@ -78,5 +78,5 @@ luca@linux:~$ curl -v http://127.0.0.1:2222/test
 
 # NOTE
 
-On ssh server you must set AllowTcpForwarding to yes.
+On SSH PROXY you must set AllowTcpForwarding to yes.
 
